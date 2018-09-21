@@ -1,5 +1,5 @@
 class base {
-  package { 'apt-transport-https':
-    ensure => 'present'
-  }
+  # if ($role != 'unassigned') {
+  #   include monitoring
+  # }
 }
