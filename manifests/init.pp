@@ -1,8 +1,4 @@
 class base {
-  # if ($role != 'unassigned') {
-  #   include monitoring
-  # }
-
   monitoring::host { $::hostname:
     group => "${role}_${datacenter}"
   }
@@ -11,4 +7,6 @@ class base {
     description   => 'SSH',
     check_command => 'check_ssh',
   }
+
+  include profile::puppet_agent
 }
